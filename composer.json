@@ -19,15 +19,15 @@
         }
     ],
     "require": {
-        "php": "~5.5|~7.0",
-        "prooph/event-store": "^6.3",
+        "php": "^8.0",
+        "prooph/event-store": "dev-6.x-php8 as 6.6.2",
         "doctrine/dbal": "^2.5",
         "beberlei/assert": "^2.3",
-        "prooph/common": "^3.7"
+        "prooph/common": "dev-3.x-php8 as 3.7.2"
     },
     "require-dev": {
         "container-interop/container-interop": "^1.1",
-        "sandrokeil/interop-config": "^1.0",
+        "sandrokeil/interop-config": "^2.0",
         "phpunit/phpunit": "^4.8",
         "sebastian/comparator": "^1.2",
         "fabpot/php-cs-fixer": "1.7.*",
@@ -38,7 +38,7 @@
         "sandrokeil/interop-config": "For usage of provided factories"
     },
     "conflict": {
-        "sandrokeil/interop-config": "<1.0"
+        "sandrokeil/interop-config": "<2.0"
     },
     "autoload": {
         "psr-4": {
@@ -50,5 +50,15 @@
             "ProophTest\\EventStore\\Adapter\\Doctrine\\": "tests/",
             "ProophTest\\EventStore\\": "vendor/prooph/event-store/tests/"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ITNetworkParis/common"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ITNetworkParis/event-store"
+        }
+    ]
 }
